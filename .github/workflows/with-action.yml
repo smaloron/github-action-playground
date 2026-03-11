@@ -5,7 +5,7 @@ jobs:
   inspect-files:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.3.1
 
       - name: lister les fichiers
         run: ls -l
