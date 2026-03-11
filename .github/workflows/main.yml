@@ -24,4 +24,4 @@ jobs:
         BUILD_TYPE: "Debug"
       steps:
         - name: show-app-name
-          run: echo $APP_NAME
+          run: echo $APP_NAME 
