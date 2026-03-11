@@ -1,0 +1,14 @@
+name: with-action.yml
+on: workflow_dispatch
+
+jobs:
+  inspect-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: lister les fichiers
+        run: ls -l
+
+      - name: Afficher README
+        run: cat README.md
