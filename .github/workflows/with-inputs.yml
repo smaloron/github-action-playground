@@ -23,4 +23,4 @@ jobs:
       - name: greeting user
         run: echo "Hello ${{ github.event.inputs.user-name }}!"
       - name: show release type
-        run: echo "Release type = ${{ github.event.inputs.user-name }}"
+        run: echo "Release type = ${{ github.event.inputs.release-type }}"
