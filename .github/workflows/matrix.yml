@@ -1,0 +1,17 @@
+name: matrix.yml
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        version: [18, 20, 22]
+    steps:
+      - run: echo "Testing on ${{ matrix.os }}"
+      - name: node setup
+        uses: actions/setup-node@v6.0.0
+        with:
+          node-version: ${{ matrix.version }}
+      - run: node -v
